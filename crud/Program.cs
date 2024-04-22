@@ -1,4 +1,4 @@
-using crud.Data;
+
 using System.Data;
 using System.Data.SqlClient;
 
@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IDbConnection>(Options =>
 new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnectionString")));
-builder.Services.AddScoped<IProductRepositort, ProductRepositort>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
